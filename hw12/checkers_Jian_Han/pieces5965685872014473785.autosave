@@ -1,0 +1,31 @@
+class Piece():
+    def __init__(self, x, y, PIECE_SIZE, player):
+        BLACK = (0, 0, 0)
+        RED = (255, 0, 0)
+
+        self.x = x
+        self.y = y
+        self.big_size = PIECE_SIZE - 2
+        self.small_size = PIECE_SIZE - 4
+
+    def display(self):
+        """
+        Display cells
+        """
+        # display uses Processing function
+        # calls, so we won't write tests for it
+
+        STROKE_COLOR = 255
+        STROKE_WEIGHT = 2
+
+        if self.player == 'human':
+            fill_color = self.BLACK
+        else:
+            fill_color = self.RED
+
+        stroke(STROKE_COLOR)
+        strokeWeight(STROKE_WEIGHT)
+
+        fill(*self.fill_color)
+        ellipse(self.x, self.y, self.big_size, self.big_size)
+        ellipse(self.x, self.y, self.small_size, self.small_size)

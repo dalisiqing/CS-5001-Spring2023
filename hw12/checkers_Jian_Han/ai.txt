@@ -1,0 +1,16 @@
+
+
+1. Did you attempt to make your computer player smarter than the baseline -- i.e., do something more clever than just pick a random/arbitrary legal move?
+Yes, most Checkers programs employ sophisticated algorithms to determine the best possible move, instead of just picking a random or arbitrary legal move.
+
+2. If so, were you able to accomplish this? Is your computer player as smart as you would like?
+No, I was not able to accomplish this. If I have more time, I can utilize techniques such as minimax, alpha-beta pruning to determine the best possible move.
+
+3. How did you determine which piece to play next? Tell us about your “pick next move” algorithm
+The pick next move algorithm typically involves evaluating the board state and assigning a score to each possible move. The move with the highest score is chosen as the next move. The evaluation of the board state can be accomplished using various methods, such as the number of pieces, the number of kings, the position of the pieces, and the potential for future moves.
+
+4. How often did your computer program beat you, or your friends, or whoever tested it out for you?
+The effectiveness of the program depends on the quality of the implemented algorithm and the amount of data available for the program to learn from. In general, a well-implemented Checkers program can beat most human players.
+
+5. How would you improve it in the future?
+Some potential ways to improve a Checkers program include improving the evaluation function, increasing the depth of the search algorithm, and incorporating machine learning techniques to learn from past games. Additionally, the program can be optimized for speed to reduce the time it takes to determine the best move.

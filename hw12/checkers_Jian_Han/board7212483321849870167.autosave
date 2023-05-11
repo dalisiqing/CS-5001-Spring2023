@@ -1,0 +1,35 @@
+# from pieces import Pieces
+from board_cells import Cell
+
+
+class Board():
+
+    def __init__(self, CELL_SIZE, BOARD_SIZE):
+        self.CELL_SIZE = CELL_SIZE
+        self.size = BOARD_SIZE
+        # self.neighbors = [-1, 0, 1]
+
+        self.cells = [[0] * self.size for i in range(self.size)]
+        for y in range(self.size):
+            for x in range(self.size):
+                self.cells[x][y] = Cell(
+                            x*self.CELL_SIZE,
+                            y*self.CELL_SIZE,
+                            self.CELL_SIZE,
+                            )
+
+    def loop_through_field(self, fn):
+        # This will save some reduplication of code in the
+        # following methods
+        for x in range(len(self.cells)):
+            for y in range(len(self.cells[x])):
+                if (x % 2 == 1 and y % 2 != 1) or (x % 2 != 1 and y % 2 == 1):
+                    fn(x, y)
+
+    def update(self):
+        self.loop_through_field(
+            lambda x, y: self.cells[x][y].active()
+            )
+        self.loop_through_field(
+            lambda x, y: self.cells[x][y].display()
+            )
