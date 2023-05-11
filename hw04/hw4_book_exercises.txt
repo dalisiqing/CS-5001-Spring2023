@@ -1,0 +1,68 @@
+1. In Listing 5.4 (addnonnegatives.py) could the condition of the if statement have used > instead of
+>= and achieved the same results? Why?
+Yes. The condition of the if statement could use > instead of >= and achieved the same results.
+Because if the condition is >, and the entry is zero, the if loop will not execute, but the while loop will continue to execute, and the sum will be the same number as the case when entry is zero.
+In this case, a zero number will not exits the loop.
+
+2. In Listing 5.4 (addnonnegatives.py) could the condition of the while statement have used > instead
+of >= and achieved the same results? Why?
+No. If the condition condition of the while statement use > instead of >= , and when the entry is zero, the while loop will not execute.
+In this case, a zero number will exits the loop. This is not inconsistent with the requirements of this program which is "Allow the user to enter a sequence of nonnegative integers".
+
+
+3. In Listing 5.4 (addnonnegatives.py) what would happen if the statement
+entry = int(input()) # Get the value
+were moved out of the loop? Is moving the assignment out of the loop a good or bad thing to do?
+Why?
+If the input statement are moved out of the loop, when the user initially enter a nonnegative integer, the while loop will be a infinite loop and the user will not have another chance to enter the next number.
+
+4. How many asterisks does the following code fragment print?
+a = 0
+while a < 100:
+	print('*', end='')
+	a += 1
+print()
+
+Answer: There will be 100 asterisks printed.
+
+5. How many asterisks does the following code fragment print?
+a = 0
+while a < 100:
+	print('*', end='')
+print()
+
+Answer: There will be infinite numbers of asterisks printed.
+
+13. Provide the exact sequence of integers specified by each of the following range expressions.
+(a) range(5)
+0, 1, 2, 3, 4
+
+(b) range(5, 10)
+5, 6, 7, 8, 9
+
+(c) range(5, 20, 3)
+5, 8, 11, 14, 17
+
+(d) range(20, 5, -1)
+20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6
+
+(e) range(20, 5, -3)
+20, 17, 14, 11, 8
+
+(f) range(10, 5)
+There will not be any integer.
+
+(g) range(0)
+There will not be any integer.
+
+(h) range(10, 101, 10)
+10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+
+(i) range(10, -1, -1)
+10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
+
+(j) range(-3, 4)
+-3, -2, -1, 0, 1, 2, 3
+
+(k) range(0, 10, 1)
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9
